@@ -1,7 +1,7 @@
 {
-  "name": "googlebooks-app",
+  "name": "book_search_engine",
   "version": "1.0.0",
-  "description": "",
+  "description": "A MERN book search engine",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -11,8 +11,8 @@
     "render-build":"npm install && npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "ahgeak",
+  "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0"
   }
