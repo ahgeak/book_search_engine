@@ -54,7 +54,7 @@ Through this project I learned the different structures between a RESTful API ap
 To use this prgram visit the deployed URL and follow the instructions below.
 
 Deployed URL Link:
-GitHub Repository: 
+GitHub Repository: https://github.com/ahgeak/book_search_engine
 
 
 ## Usage

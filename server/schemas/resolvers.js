@@ -6,7 +6,7 @@ const resolvers = {
     // Returns a User type 
     me: async (parent, args, context) => {
         if (context.user) {
-          return User.findOne({ _id: context.user._id });
+          return await User.findOne({ _id: context.user._id });
         }
         throw AuthenticationError;
       },
@@ -44,7 +44,7 @@ const resolvers = {
     // save a book to a user's `savedBooks` field by adding it to the set (to prevent duplicates)
     saveBook: async (parent, {  bookInput }, context) => {
       if (context.user) {
-        return User.findOneAndUpdate(
+        return await User.findOneAndUpdate(
           { _id: context.user._id},
           { $addToSet: { savedBooks: bookInput } },
           { new: true }
@@ -56,7 +56,7 @@ const resolvers = {
     // removeBook(bookId: String): User
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
-        return User.findOneAndUpdate(
+        return await User.findOneAndUpdate(
           { _id: context.user._id },
           { $pull: { savedBooks: {bookId} } },
           { new: true }
